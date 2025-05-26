@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+     Random rand = new Random();
+     int sec = rand.nextInt(100)+1;
+     Scanner s = new Scanner(System.in);
+     int g = 0;
+     System.out.println("I'm thinking a umber between 1 and 100");
+     while(g!=sec){
+         System.out.println("Enter guess number!!!");
+         if(!s.hasNextInt()){
+             System.out.println("Please enter valid number");
+             s.next();
+             continue;
+         }
+         g = s.nextInt();
+         if(g<1||g>100){
+             System.out.println("Please guess a number between 1 and 100");
+         }
+         else if(g>sec){
+            System.out.println("too high!!!try  again");
+         }
+         else if(g<sec){
+             System.out.println("Toot low!!!try again");
+         }
+         else{
+             System.out.println("Guessed Right");
+         }
+     }
+    }
+}
