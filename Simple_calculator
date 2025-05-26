@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int k = s.nextInt();
+        System.out.println("Enter 1 for addition ...2 for subtraction ... 3 for multiplication ...4 for division");
+        int ch = s.nextInt();
+        switch(ch){
+            case 1:
+                System.out.println(n+k);
+                break;
+            case 2:
+                System.out.println(n-k);
+                break;
+            case 3:
+                System.out.println(n*k);
+                break;
+            case 4:
+                System.out.println(n/k);
+                break;
+            default:
+                System.out.println("enter valid operation");
+        }
+    }
+}
