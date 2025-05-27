@@ -1,0 +1,14 @@
+public class Main
+{
+	public static void main(String[] args) {
+		int a=7,b=5,c=9;
+		int res1 = a+b*c;
+		int res2 = (a+b)*c;
+		boolean b1 = a>b&&b>c;
+		boolean b2 = a>b || b<c &&a<c;
+		System.out.println("res1 : a+b*c"+res1);
+		System.out.println("res2 : (a+b)*c"+res2);
+		System.out.println("a>b&&b>c"+b1);
+		System.out.println("a>b||b>c&&a<c"+b2);
+	}
+} 
