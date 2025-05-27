@@ -1,0 +1,18 @@
+public class Main
+{
+		void display(){
+		    System.out.println("Hello world!!!");
+		}
+		void display(int n){
+		    System.out.println("You entered "+n);
+		}
+		void display(int k,int l){
+		    System.out.println("Sum of the entered numbers is "+(k+l));
+		}
+		public static void main(String args[]){
+		    Main obj = new Main();
+		    obj.display();
+		    obj.display(5);
+		    obj.display(5,7);
+		}
+} 
