@@ -1,0 +1,21 @@
+interface playable{
+    void play();
+}
+class Music implements playable{
+    public void play(){
+        System.out.println("Playing music!!!");
+    }
+}
+class Video implements playable{
+    public void play(){
+        System.out.println("Playing video");
+    }
+}
+class Main{
+    public static void main(String args[]){
+        playable m = new Music();
+        playable v = new Video();
+        m.play();
+        v.play();
+    }
+}
