@@ -1,0 +1,21 @@
+public class Main
+{
+	public static void main(String[] args) {
+		int i = 7;
+		float f = 3.4f;
+		byte b  =120;
+		short s  = 32000;
+		long l = 1280000000000L;
+		char ch = 'C';
+		boolean bl = true;
+		double d = 7.77878787;
+		System.out.println("int : "+i);
+		System.out.println("Byte : "+b);
+		System.out.println("Short : "+s);
+		System.out.println("Long  : "+l);
+		System.out.println("Float : "+f);
+		System.out.println("Char : "+ch);
+		System.out.println("Boolean : "+bl);
+		System.out.println("double : "+d);
+	}
+}
