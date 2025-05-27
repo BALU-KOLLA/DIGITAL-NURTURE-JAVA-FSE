@@ -1,0 +1,18 @@
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        String s1 = s.nextLine();
+        char[] st = s1.toCharArray();
+        int i=0,j=s1.length()-1;
+        while(i<j){
+            char temp = st[i];
+            st[i] = st[j];
+            st[j] = temp;
+            i++;
+            j--;
+        }
+        String reverse = new String(st);
+        System.out.println(reverse+" ");
+    }
+}
