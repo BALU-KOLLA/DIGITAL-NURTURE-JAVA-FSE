@@ -1,0 +1,15 @@
+import java.util.*;
+class cars{
+    void display(){
+        String brand = "Volvo";
+        Short number = 9979;
+        int topspeed = 134;
+        System.out.println(brand+" "+number+" "+topspeed);
+    }
+}
+class Main{
+    public static void main(String args[]){
+        cars c = new cars();
+        c.display();
+    }
+}
