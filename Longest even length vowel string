@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        System.out.println("enter the string");
+        Scanner s = new Scanner(System.in);
+        String k = s.nextLine();
+        System.out.println(Longest(k));
+    }
+    public static boolean vowel(String word){
+        char ch = ' ';
+        if(!(word.isEmpty())){
+            ch = Character.toLowerCase(word.charAt(0));
+        }
+        return ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u';
+    }
+    public static String Longest(String str){
+        String[] words = str.split("\\s+");
+        String res = "00";
+        int maxln = 0;
+        for(String word:words){
+            if(vowel(word)&&(word.length()%2==0)){
+                if(word.length()>maxln){
+                    maxln = word.length();
+                    res=word;
+                }
+            }
+        }
+        return res;
+    }
+}
