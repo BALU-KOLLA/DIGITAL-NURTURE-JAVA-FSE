@@ -17,3 +17,23 @@ public class Main{
         return Math.abs(sum);
     }
 }
+////////////////////////METHOD 2/////////////////------------JAVA-----------JAVA-------
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+        str = str.toUpperCase();
+        System.out.println("Absolute Cumulative sum is "+Cumsum(str));
+    }
+    public static int Cumsum(String s){
+        char ch[] = s.toCharArray();
+        int sum=0;
+        for(int i=0;i<s.length()-1;i++){
+            int num1 = ch[i]-'0';
+            int num2 = ch[i+1]-'0';
+            sum+=num2-num1;
+        }
+        return Math.abs(sum);
+    }
+}
