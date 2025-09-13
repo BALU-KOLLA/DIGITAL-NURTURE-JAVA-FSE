@@ -34,3 +34,44 @@ public class Main
 	    return paircount;
 	}
 }
+*********************************************METHOD II -  USING MAP****************************************************
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Enter the size of array");
+	    int n = s.nextInt();
+	    System.out.println("enter the required sum");
+	    int k = s.nextInt();
+	    System.out.println("Enter the element of array :");
+	    int[] a = new int[n];
+	    for(int i=0;i<n;i++){
+	        a[i] = s.nextInt();
+	    }
+	    System.out.println("Sum pairs with the value "+k+" are "+Pair(a,k));
+	}
+	public static int Pair(int[] a,int v){
+	    int count = 0;
+	    HashMap<Integer,Integer> m = new HashMap<>();
+	    for(int i = 0;i<a.length;i++){
+	        if(m.containsKey(v-a[i])){
+	            count += m.get(v-a[i]);
+	        }
+	        if(m.containsKey(a[i])){
+	            m.put(a[i],m.get(a[i]+1));
+	        }
+	        else{
+	            m.put(a[i],1);
+	        }
+	    }
+	    return count;
+	}
+}
